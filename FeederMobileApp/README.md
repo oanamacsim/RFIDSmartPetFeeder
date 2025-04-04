@@ -13,27 +13,27 @@ The **RFID Smart Pet Feeder** iOS application provides an efficient and automate
 ### Feeders View
 The main dashboard where all your registered feeders are displayed. Manage and edit feeder settings.
 
-<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeedersView.png" width="600">
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeedersView.jpg" width="400">
 
 ### Add New Feeder View
 Quickly add a new feeder and set up necessary details, including name, feederID and password.
 
-<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/AddNewFeederView.png" width="600">
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/AddNewFeederView.png" width="400">
 
 ### Feeder View
 An in-depth view for each individual feeder, allowing updates and real-time monitoring of feeding events.
 
-<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeederView.png" width="600">
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeederView.jpg" width="400">
 
 ### Add Feed Configuration View
 Easily configure feeding schedules, portion sizes, and frequency for each feeder.
 
-<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/AddFeedConfigurationView.png" width="600">
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/AddFeedConfigurationView.jpg" width="400">
 
 ### Feed Configurations View
-A consolidated overview of all the configured feeding schedules for your pets.
+A consolidated overview of all the configured feeding schedules for each feeder.
 
-<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeedConfigurationsView.png" width="600">
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeedConfigurationsView.jpg" width="500">
 
 ## Requirements
 - **iOS Version**: 15.0 or later
