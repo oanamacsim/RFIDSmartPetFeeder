@@ -80,8 +80,6 @@ The firmware is modular and follows an object-oriented design. Key components in
 - **Modularity**: Each hardware component is managed by a dedicated controller class.
 - **Asynchronous Communication**: Leverages `AsyncTCP` and `ESPAsyncWebServer` for non-blocking network operations.
 
-#### UML Diagram
-![UML Diagram](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/UMLDiagram.png)
 
 ---
 
