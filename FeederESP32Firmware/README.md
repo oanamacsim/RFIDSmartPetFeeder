@@ -27,7 +27,7 @@ This project demonstrates expertise in:
 - **Time-Based Feeding**: Dispenses food at scheduled times.
 
 ### Advanced Features
-- **Over-the-Air Configuration**: Users can configure feeding schedules and RFID tags via an IOS mobile application.
+- **Over-the-Air Configuration**: Users can configure feeding schedules and RFID tags via an iOS mobile application.
 - **Data Collection**: Feeding events, gate activity, and food weight are saved into a cloud MySQL database.
 - **Fault Tolerance**: Handles WiFi disconnections gracefully by retrying connections and falling back to an access point mode to reconfigure the WiFi network address.
 
@@ -44,6 +44,23 @@ This project demonstrates expertise in:
   - HX711 weight sensor (for food level monitoring)
 - **Power Supply**: 9V battery or adapter
 - **Relay Module**: For motor control
+
+### Wiring Diagrams
+
+#### Power Wiring Diagram (All Sensors)
+<img src="https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/PowerWiringDiagramAllSensors.png" width="600">
+
+#### DC Motor Wiring
+<img src="https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringDCMotor.png" width="600">
+
+#### RFID Module Wiring (RDM6300)
+<img src="https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringDiagramRDM600.png" width="600">
+
+#### Stepper Motor Wiring
+<img src="https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringStepperMotor.png" width="600">
+
+#### Weight Module Wiring
+<img src="https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringWeightModule.png" width="600">
 
 ---
 
@@ -62,6 +79,9 @@ The firmware is modular and follows an object-oriented design. Key components in
 ### Key Design Patterns
 - **Modularity**: Each hardware component is managed by a dedicated controller class.
 - **Asynchronous Communication**: Leverages `AsyncTCP` and `ESPAsyncWebServer` for non-blocking network operations.
+
+#### UML Diagram
+![UML Diagram](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/UMLDiagram.png)
 
 ---
 
@@ -92,7 +112,7 @@ The firmware is modular and follows an object-oriented design. Key components in
 ## Technical Details
 
 ### Key Algorithms
-- **Time Synchronization**: Uses NTP to synchronize the ESP32's internal clock with an external time server.
+- **Time Synchronization**: Utilizes online APIs to locally synchronize time with an external time server. 
 - **Weight Calibration**: Implements a calibration routine for the HX711 sensor to ensure accurate weight measurements.
 - **RFID Validation**: Compares scanned RFID tags against a list of registered tags stored in non-volatile memory.
 
@@ -105,3 +125,4 @@ The firmware is modular and follows an object-oriented design. Key components in
 ---
 
 Feel free to explore the code and reach out with any questions or feedback!
+
