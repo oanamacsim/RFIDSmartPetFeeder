@@ -1,23 +1,92 @@
-# RFID Smart Pet Feeder
+# RFID Smart Pet Feeder 🐾
 
-Welcome to the **RFID Smart Pet Feeder** project! This is an intelligent pet feeding device designed to automate and personalize the feeding process for your pets. The system uses RFID technology to restrict access to food, ensuring that only authorized pets can eat from the feeder. It also includes a mobile app for remote control and monitoring.
+**An IoT-powered smart feeding system that combines RFID authentication, scheduled dispensing, and real-time monitoring via iOS app**
 
-## Features
-- **RFID Access Control**: Only pets with registered RFID tags can access the food.
-- **WiFi Connectivity**: Connect the feeder to your home network for remote control.
-- **Mobile App**: Configure feeding schedules, monitor food levels, and receive notifications via the iOS app.
-- **Customizable Feeding Plans**: Set specific feeding times and portion sizes for each pet.
-- **Weight Monitoring**: The feeder monitors the food level in the bowl and notifies you when it's low.
+[![Hardware Demo](https://img.shields.io/badge/View-Hardware_Setup-blue)](https://github.com/oanamacsim/RFIDSmartPetFeeder/tree/main/FeederESP32Firmware/)
+[![iOS App Preview](https://img.shields.io/badge/View-iOS_App-orange)](https://github.com/oanamacsim/RFIDSmartPetFeeder/tree/main/FeederMobileApp/)
 
-## Components
-1. **ESP32 Firmware**: The brain of the feeder, handling RFID scanning, motor control, and WiFi communication.
-2. **iOS Application**: A user-friendly app for configuring and monitoring the feeder.
+## 🌟 Key Features
 
-## Getting Started
-1. Clone this repository.
-2. Follow the instructions in the `ESP32_Firmware` and `iOS_App` folders to set up the hardware and software.
-3. Connect the feeder to your WiFi network, and then use the mobile app to configure feeding scenarios.
-4. Start feeding your pets with ease!
+### Hardware (ESP32 Firmware)
+- **RFID Access** - Only registered pet tags activate the trap door
+- **Precision Food Dispensing** - Controlls a DC motor for food release and a stepper motor for the trap door
+- **Real-time Weight Monitoring** - Weight module sensor tracks bowl food levels
+- **Dual Connectivity** - WiFi connection for cloud sync + AP mode for wifi configuration
+- **Automated Scheduling** - Time-based feeding configurations from an IOS application
+  
+### iOS Application
+- **Multi-Feeder Dashboard** - Manage multiple devices from one interface
+- **Feeding Configurations** - Intuitive scheduling interface with portion control
+- **Live Monitoring** - Real-time food level updates and feeding alerts
+- **Event History** - Review past feeding sessions and trap access attempts
 
-## Contributing
-Feel free to fork this project, open issues, or submit pull requests. Contributions are welcome!
+## 🛠 System Architecture
+
+```mermaid
+graph TD
+    A[iOS App] <-->|HTTP| B(MySQL Cloud Database)
+    B <-->|WiFi/HTTP| C[ESP32 Controller]
+    C --> D[RFID Reader]
+    C --> E[Stepper Motor]
+    C --> F[DC Motor]
+    C --> G[HX711 Sensor]
+    C --> H[WiFi Manager]
+    H --> I[WiFi Connection]
+    H --> J[Access Point Server]
+
+
+```
+
+## 📦 Hardware Setup
+
+### Required Components
+| Component | Model | Purpose | Wiring |
+|-----------|-------|---------|---------|
+| Microcontroller | ESP32 | System brain | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/PowerWiringDiagramAllSensors.png) |
+| RFID Reader | RDM6300 | Pet tag authentication | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringDCMotor.png) |
+| DC Motor | 12V DC Motor | Food dispensing mechanism | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringDCMotor.png) |
+| Stepper Motor | 12V 28BYJ-48 | Trap oppening mechanism | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringStepperMotor.png) |
+| Sensor | HX711 | Weight measurement | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/WiringWeightModule.png) |
+| Power | 9-12V Supply | System power | [View](https://raw.githubusercontent.com/oanamacsim/RFIDSmartPetFeeder/main/FeederESP32Firmware/images/PowerWiringDiagramAllSensors.png) |
+
+
+## 📱 Mobile App Preview
+
+**Feeder Dashboard:**
+
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeedersView.jpg" width="450">  
+
+**Live Monitoring:**  
+
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/FeederView.jpg" width="450">
+
+**Schedule a Feed Config:**  
+
+<img src="https://github.com/oanamacsim/RFIDSmartPetFeeder/blob/main/FeederMobileApp/images/AddFeedConfigurationView.jpg" width="450">  
+
+## 🚀 Getting Started
+
+### Hardware Setup (ESP32 Firmware)
+
+🔧 **[Hardware Guide →](FeederESP32Firmware#setup-instructions)**  
+
+- Flashing firmware instructions  
+- Component wiring diagrams  
+- Sensor calibration  
+
+### Mobile App Setup (iOS)
+
+📱 **[App Setup Guide →](FeederMobileApp#setup-instructions)**
+  
+**Requirements:**  
+- Xcode 13+  
+- iOS 15+ device/simulator  
+
+**Covers:**  
+- Project configuration  
+- Build & run instructions  
+- Feeder pairing  
+
+
+## 🤝 Contributing
+Feel free to explore the code and reach out with any questions or feedback!
