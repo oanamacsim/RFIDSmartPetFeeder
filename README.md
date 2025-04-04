@@ -6,11 +6,11 @@
 [![iOS App Preview](https://img.shields.io/badge/View-iOS_App-orange)](https://github.com/oanamacsim/RFIDSmartPetFeeder/tree/main/FeederMobileApp/)
 
 
-Designed for pet owners who want to:
-✔️ Prevent food theft by other animals  
-✔️ Maintain consistent feeding routines  
-✔️ Monitor consumption while away  
-✔️ Customize portions for each pet
+## Designed for pet owners who want to:
+- Prevent food theft by other animals  
+- Maintain consistent feeding routines  
+- Monitor consumption while away  
+- Customize portions for each pet
 
 ## 🌟 Key Features
 
