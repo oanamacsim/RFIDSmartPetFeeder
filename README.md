@@ -1,9 +1,16 @@
 # RFID Smart Pet Feeder 🐾
 
-**An IoT-powered smart feeding system that combines RFID authentication, scheduled dispensing, and real-time monitoring via iOS app**
+**An automated feeding system featuring RFID-based pet authentication, precise portion management through controlled food dispensing mechanisms, and real-time monitoring capabilities via WiFi-connected sensors. The project combines industrial-grade reliability with consumer-friendly operation, offering scheduled feedings, access control for multi-pet households, and remote status checks through its dedicated mobile application.**
 
 [![Hardware Demo](https://img.shields.io/badge/View-Hardware_Setup-blue)](https://github.com/oanamacsim/RFIDSmartPetFeeder/tree/main/FeederESP32Firmware/)
 [![iOS App Preview](https://img.shields.io/badge/View-iOS_App-orange)](https://github.com/oanamacsim/RFIDSmartPetFeeder/tree/main/FeederMobileApp/)
+
+
+Designed for pet owners who want to:
+✔️ Prevent food theft by other animals  
+✔️ Maintain consistent feeding routines  
+✔️ Monitor consumption while away  
+✔️ Customize portions for each pet
 
 ## 🌟 Key Features
 
