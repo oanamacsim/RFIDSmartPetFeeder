@@ -60,4 +60,4 @@ To get started with the RFID Smart Pet Feeder app, follow these simple steps:
 
 ## Contributions
 
-If you encounter any issues or have suggestions for improvements, feel free to open an issue.
+Feel free to explore the code and reach out with any questions or feedback!
